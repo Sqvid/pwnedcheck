@@ -145,7 +145,7 @@ func checkFromFile(hashfile string) {
 		pwnStatus, pwnCount := isPwned(passHash)
 
 		if pwnStatus {
-			fmt.Printf("%s has been leaked %d times!\n", passHash, pwnCount)
+			fmt.Printf("%s has been leaked %d times!\n", passHash[:5], pwnCount)
 		}
 	}
 }
